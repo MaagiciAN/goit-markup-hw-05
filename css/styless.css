@@ -16,6 +16,7 @@
         --button-background-color: #F4F4FD;
         --button-exlusive-color: #e7e9fc;
         --grey: #2E2F42B2;
+        --checkbox-color: #8e8f99;
 }
 body {
     font-family: "Roboto", sans-serif;
@@ -661,6 +662,13 @@ p {
     resize: none;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
    .modal-form-comment::placeholder {
     color: rgba(46, 47, 66, 0.40);
@@ -674,6 +682,10 @@ p {
     }
     .modal-form-agreement {
         display: flex;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: var(--checkbox-color);
         align-items: center;
         margin-bottom: 40px;
         gap: 12px;
@@ -690,14 +702,15 @@ p {
         transform: scale(1);
     }
     .modal-form-custom-checkbox {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         width: 16px;
         height: 16px;
         border-radius: 2px;
         border: 1px solid rgba(46, 47, 66, 0.40);
-        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        fill: transparent;
     }
     
     .modal-form-checkbox-icon {
@@ -721,4 +734,7 @@ p {
     }
     .modal-form-container-decor {
         position: relative;
+    }
+    .modal-form-container-checkbox {
+        margin-bottom: 24px;
     }
