@@ -723,7 +723,6 @@ p {
     }
     
     .modal-form-agreement-desc {
-        display: flex;
         flex-direction: column;
         flex-shrink: 0;
         color: #8E8F99;
